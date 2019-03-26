@@ -1,0 +1,83 @@
+.container{
+  width:100%;
+  height:100rpx;
+  /* padding:30rpx; */
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input{
+    box-sizing: border-box;
+    padding-left: 90rpx;
+    display: block;
+    height:18rpx;
+    width:510rpx;
+    background-color:#ddd;
+    background-image: url('https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/banners/1.png?sign=1d48c77e23fa2d3b6659c8bc695dcbbd&t=1551797769');
+    background-repeat: no-repeat ;
+    background-position:50rpx 8rpx;
+    background-size: 28rpx 28rpx;
+    color:#fff;
+    border-radius: 55rpx;
+    font-size: 12px;
+}
+.cancle{
+  font-size: 17px;
+  color:#000;
+  margin-left: 20rpx;
+}
+
+/* pages/search/search.wxss */
+/* 卡片 */
+.card{
+  background-color: #fff;
+  border:1rpx solid #ddd;
+  border-radius: 20rpx;
+  margin:10rpx 10rpx;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+/* 商品项目 */
+.cell-item{
+  border-bottom: 1rpx solid #ddd;
+  padding:0rpx 30rpx;
+  display: flex;
+}
+.cell-item image.goods{
+  width:180rpx;
+  height:150rpx;
+  /* border:1px solid red; */
+}
+.cell-item>.text-box{
+  height:140rpx;
+  width:500rpx;
+  display: inline-block;
+  /* border:1px solid red; */
+  padding-left:30rpx;
+  padding-top:10rpx;
+}
+.cell-item>.text-box>text:first-child{
+  font-size:20px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 20rpx;
+}
+.cell-item>.text-box>text:nth-child(2){
+  font-size:17px;
+  font-weight: 900;
+  color:#f55700;
+}
+.cell-item>.text-box>text:nth-child(3){
+  font-size:15px;
+  color:#919191;
+  text-decoration: line-through;
+  margin-left: 20rpx;
+}
+.cell-item>.text-box>image.cart:last-child{
+  width:50rpx;
+  height:50rpx;
+  margin-left: 40rpx;
+  transform: rotate(-20deg);
+}

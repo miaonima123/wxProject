@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/map/map",
+    "pages/cart/cart",
+    "pages/food/food",
+    "pages/foodsInfo/foodsInfo",
+    "pages/user/user",
+    "pages/class/class",
+    "pages/search/search",
+    "pages/input/input",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/pages/tabs2/index.png",
+        "selectedIconPath": "/pages/tabs2/index2.png"
+      },
+      {
+        "pagePath": "pages/class/class",
+        "text": "分类",
+        "iconPath": "/pages/tabs2/class.png",
+        "selectedIconPath": "/pages/tabs2/class2.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "/pages/tabs2/cart.png",
+        "selectedIconPath": "/pages/tabs2/cart2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户",
+        "iconPath": "/pages/tabs2/user.png",
+        "selectedIconPath": "/pages/tabs2/user2.png"
+      }
+    ]
+  },
+  "permission":{
+    "scope.userLocation":{
+      "desc":"你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

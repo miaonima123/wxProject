@@ -1,0 +1,134 @@
+.container{
+    height:100rpx;
+    width:100%;
+    border-bottom:1px solid #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.setWhere{
+    position: absolute;
+    right: 25rpx;
+}
+.del-container{
+    height:150rpx;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    border-bottom:1px solid #f4f4f4;    
+}
+.left{
+    margin-left:20rpx;
+}
+.right{
+    margin-right: 20rpx;
+}
+
+
+/* checkbox未选中时样式 */
+
+checkbox .wx-checkbox-input{  
+    /* 自定义样式.... */
+   border-radius: 50%;
+   height: 30rpx;
+   width: 30rpx;
+   margin-top: -4rpx;
+ }
+ 
+ /* checkbox选中时样式 */
+ 
+ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   /* 自定义样式.... */
+   background-color: #e02e24;
+   border: 1rpx solid #e02e24;
+   border-radius: 50%;
+ }
+
+ .cartList{
+     height:135rpx;
+     padding-left:50rpx;
+     width:100%;
+     border-bottom:1px solid #f4f4f4;
+     display: flex;
+     align-items: center;
+ }
+ .cartList>image{
+     height:100rpx;
+     width:100rpx;
+     padding:0rpx 20rpx;
+     /* border:1px solid red; */
+ }
+ .cartList>view.title-container{
+     display: flex;
+     flex-direction: column;
+     margin-right: 20rpx;
+ }
+ /* fa6d35 */
+ .cartList>view>text:last-child{
+     color:#fa6d35;
+ }
+ .rightStyle{
+   /* border:1px solid red; */
+   display: flex;
+   flex-flow: row nowrap;
+   position: relative;
+   right:-40rpx;
+   top:26rpx;
+ }
+ .btnStyle{
+   width:50rpx;
+   height:50rpx;
+   text-align: center;
+   background: #f1f1f1;
+   border:1px solid #f0f0f0; 
+   border-radius: 20rpx;  
+ }
+ .btnStyle>text{
+   color:black !important;
+   line-height: 50rpx;
+ }
+ .inputStyle{
+   text-align: center;
+   /* border:1px solid red; */
+   width:60rpx;
+   border-bottom: 1px solid #eee;
+   padding:0rpx 20rpx;
+ }
+ .total{
+   width:100%;
+   height:80rpx;
+   /* border:1px solid red; */
+   border-top:1px solid #eee;
+   position: fixed;
+   bottom:0rpx;
+   display: flex;
+   justify-content: space-between;
+ }
+ .total>.total_left{
+   width:30%;
+   /* border:1px solid green; */
+   display: flex;
+   align-items: center;
+   padding-left:20rpx;
+ }
+ .total>.total_right{
+   width:50%;
+   /* border:1px solid green; */
+   align-items: center;
+   display: flex;
+   justify-content: space-between;
+ }
+ .total>.total_right>view{
+   margin-left:10rpx;
+   height:80rpx;
+   width:33%;
+   background:#fc742a;
+   color:#fff;
+   text-align: center;
+ }
+ .total>.total_right>view>text{
+   font-size:14px;
+   line-height:80rpx;
+ }

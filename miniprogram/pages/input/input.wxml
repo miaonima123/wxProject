@@ -1,0 +1,17 @@
+<!-- 查询页面 -->
+<view class="container">
+  <input placeholder='' bindconfirm="search" focus='true' name="text"></input>
+  <text class="cancle" bindtap='jump'>取消</text>
+</view>
+<!-- 卡片 -->
+<view class="card" wx:if="{{goodsList.length>0}}">
+  <view class="cell-item" wx:for="{{goodsList}}" wx:key="index">
+    <image src="{{item.goods_img_url}}" class="goods"></image>
+    <view class="text-box">
+        <text>{{item.goods_title}}</text>
+        <text>￥{{item.goods_price}}</text>
+        <text>原价:{{item.goods_oprice}}</text>
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/search/shop-cart-2.png?sign=97c2ac4a74586e9190f5c323d3cc0894&t=1552048935" class="cart"></image>
+    </view>
+  </view>
+</view>

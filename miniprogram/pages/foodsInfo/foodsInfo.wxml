@@ -1,0 +1,72 @@
+<view class="container">
+    <!-- 轮播图 -->
+    <swiper class="swiper-container" indicator-dots	autoplay indicator-active-color='#eee'	loop>
+        <swiper-item class="swiper-items" wx:for="{{swiper}}" wx:key="index" >
+            <image src="{{item}}"></image>
+        </swiper-item>
+    </swiper>
+
+
+    <!-- 价格 -->
+    <view class="price_title">
+        <view class="price_share">
+            <text>￥{{price}}</text>
+            <view>
+                <button open-type='share'  bindtap="transpond">
+                    <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods_info/info/share.png?sign=43473035cfe1b9da21f7554dbfcc703d&t=1552714193"></image>
+                </button>
+            </view>
+        </view>
+        <view class="detail">
+            <text>{{title}}</text>
+        </view>
+    </view>
+    <!-- 俩方块 -->
+    <view class="box-container">
+        <view class="box-item">
+            <view>
+                <view>优惠卷</view>
+                <text>领取优惠卷</text>
+            </view>
+            <text>></text>
+        </view>
+        <view class="box-item">
+                <view>
+                    <view>运费</view>
+                    <text>运费6.0元</text>
+                </view>
+                <text>></text>
+            </view>
+    </view>
+    <!-- 隔断 -->
+    <view class="wall"></view>
+   <!-- 商品详情 -->
+   <view class="goods_detail">
+        <text class="detail_title">商品详情</text>
+        <image src="{{item}}" wx:for="{{main}}" lazy-load='true' wx:key="index"></image>
+   </view>
+   <!-- 返回首页 -->
+   <view class="return">
+       <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods_info/info/return2.png?sign=1ab840f1546556db1ba6b8404bb96cff&t=1552719418" bindtap='jump_index'></image>
+   </view>
+   <!-- 购物车 -->
+   <view class="shop_car">
+        <view class="car-item"><text>立即购买</text></view>
+        <view class="car-item" bindtap='addCart'><text>加入购物车</text></view>
+   </view>
+
+
+
+
+
+
+
+</view>
+
+
+
+
+
+
+<!-- <button bindtap="onShareAppMessage" open-type='share' class="h1-item1">分享给好友</button> -->
+

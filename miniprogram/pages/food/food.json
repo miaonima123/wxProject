@@ -1,0 +1,7 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ff3334",
+  "navigationBarTitleText": "饮料小吃",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh":true
+}

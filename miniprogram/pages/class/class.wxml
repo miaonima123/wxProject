@@ -1,0 +1,37 @@
+ <view class="container">
+
+  <view class="left">
+    <view class="aside" scroll-y="{{t}}" bindtouchmove='test' bind
+     bindtouchstart="touch1" style="top:{{aside}}rpx">
+        <block  wx:for="{{list_title}}" wx:key="index">
+            <view  class="aside-item" bindtap='setIndex' data-i="{{index}}" data-type="{{item.type}}">
+                <text class="{{i==index?'active':''}}">{{item.type}}</text>
+            </view>
+        </block>
+    </view>
+</view>
+    
+
+<view class="right">   
+    <view class="main" style='top:{{main}}rpx' bindtouchmove='test2'
+      bindtouchstart='touch2'
+    >
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/class/ad2.jpg?sign=bb301f10d7567434ba83a1c10518969f&t=1552301804" class="banner">
+        </image>
+        <block wx:if="{{goods_list.length>0}}">
+            <view class="main-item" wx:for="{{goods_list}}" wx:key="index">
+                <image src="{{item.img}}"></image>
+                <view>
+                    <text>{{item.title}}</text>
+                    <text>￥{{item.price}}</text>
+                </view>
+                <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/search/shop-cart-2.png?sign=feefd30b91762e9ce48d5a728c20506d&t=1552303314">
+                </image>
+            </view>
+        </block>
+    </view>
+</view> 
+
+
+</view>
+

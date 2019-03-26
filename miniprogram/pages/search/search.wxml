@@ -1,0 +1,25 @@
+<view class="container">
+    <!-- 提示搜索结果 -->
+    <view class="wrap">
+        <view>搜索到XX条数据</view>
+    </view>
+    <!-- 商品列表 -->
+    <view class="goods-list">
+        <view class="goods-list-item">
+            <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/search/cp2.jpg?sign=95d4a3ed645ef9a937b3f465d13755a6&t=1552045525"></image>
+            <view class="goods-list-text">
+                <text>夏天美食</text>
+                <text>￥150</text>
+                <text>￥999.0</text>
+                <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/search/shop-cart-2.png?sign=97c2ac4a74586e9190f5c323d3cc0894&t=1552048935"></image>
+            </view>
+            
+        </view>
+    </view>
+
+
+
+
+</view>
+
+

@@ -1,0 +1,10 @@
+<view class="container">
+    <view class="item" wx:for="{{foodList}}" wx:key="index"  data-i='{{item._id}}' bindtap="jump_foodInfo">
+        <image src="{{item.goods_imgUrl}}"></image>
+        <view class="item-text">
+            <text>{{item.goods_title}}</text>
+            <text>￥{{item.goods_price}}</text>
+            <text>￥{{item.goods_rprice}}</text>
+        </view>
+    </view>
+</view>

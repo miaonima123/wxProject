@@ -1,0 +1,51 @@
+<!-- 购物车 完成-->
+<view class="container">
+    <text>购物车</text>
+    <text class="setWhere" bindtap="changeDel">{{edit}}</text>
+</view>
+<!-- 完成 删除按钮 -->
+<view class="del-container" style="display:{{hide}}">
+    <view class="left">
+        <checkbox-group class='pull-left' bindchange="delStatus">
+            <label class="checkbox flex flex-vc ">
+              <checkbox checked="{{checkboxStatus}}" color='#fff' />
+            </label>
+            <text>全选</text>
+        </checkbox-group>
+    </view>
+    <view class="right">
+        <button type="warn" bindtap='allDel'>删除所选</button>
+    </view>
+</view>
+
+<!-- 商品列表 -->
+<view class="cartList" wx:for="{{cart_list}}" wx:key="index">
+    <icon type="{{item.type}}" size="25" bindtap='CheckIcon' data-index="{{index}}" data-price="{{item.price}}" data-count="{{item.count}}" data-pid = "{{item._id}}"></icon>
+    <image src="{{item.cart_img}}"></image>
+    <view class="title-container">
+        <text>{{item.title}}</text>
+        <text>价格:￥{{item.price}}</text>
+    </view>
+    <view class="rightStyle">
+        <view class="btnStyle" bindtap='cutCount' data-count="{{item.count}}" data-index="{{index}}">
+        <text >-</text>
+      </view>
+      <input value="{{item.count}}" type="number" class="inputStyle" maxlength='3' data-count="{{item.count}}" bindinput="test"></input>
+      <view class="btnStyle" bindtap='addCount' data-index="{{index}}" data-count="{{item.count}}">
+        <text>+</text>
+      </view>
+    </view>
+</view>
+
+<!-- 小计结算 -->
+<view class="total" style="display:{{totalStyle}}">
+    <view class="total_left">
+        <icon type="{{allSelected}}" size="30" bindtap='allSelect'></icon>全选
+    </view>
+    <view class="total_right">
+      <text>合计:<text style="color:#fc742a">￥{{total}}</text></text>
+      <view>
+        <text>结算</text>
+      </view>
+    </view>
+</view>

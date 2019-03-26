@@ -1,0 +1,313 @@
+<!-- 展示大图 和 搜索框 -->
+    <view class="banner" style="background-image:url('https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/banners/222.png?sign=d7b45036bb2712bd6a9083895b97e60c&t=1551675089');">
+      <input type="text" selection-start="5" placeholder='请输入关键字进行搜索' class="search"  placeholder-style="color:#fff;font-size:12px; letter-spacing:1.3px;" bindtap="jump_input" style="{{bg}}" name="key" > 
+      </input>
+      <!-- <input type="submit" ></input> -->
+</view>
+
+<!-- 格子 -->
+  <view class="grid">
+    <view class="grid-item" wx:for="{{icon_list}}" wx:key="index">
+    <image src="{{item.img_url}}" lazy-load='true' mode="aspectFill"  bindtap='jump' data-code="{{item.id}}"></image>
+    <text>{{item.title}}</text>
+    </view>
+</view>
+
+<!-- 展示大图 -->
+  <view class="showImage">
+    <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/banners/111.png?sign=022665f101560ae306b2bd57d5337e9c&t=1551761472"></image>
+  </view>
+  <!-- 活动推销 -->
+  <view class="main">
+    <view class="main-item">
+      <view class="main-item-text">
+        <text>优惠卷</text>
+        <text>限时领取</text>
+      </view>
+        <text class="l-text">刷新超低折扣价</text>
+      <view class="main-item-image">
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/cookie0.png?sign=1d673250524d70c9231e85b8dbd12a8e&t=1551761823"></image>
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/cookie1.png?sign=f143ead5c3ffeaf31c1b05f16df45bee&t=1551761839"></image>
+      </view>
+      <text >-50￥</text>
+    </view>
+    <view class="main-item">
+      <view class="main-item-text">
+        <text>限时抢购</text>
+        <text>售完为止</text>
+      </view>
+      <text class="l-text">打破电商价格堡垒</text>
+      <view class="main-item-image">
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/cookie2.png?sign=10ea8eeeb4e770971a4a52761b6a2925&t=1551761856"></image>
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/mian.png?sign=a7d5f86b7eeb413923d2c1285f3d5d17&t=1551761888"></image>
+      </view>
+    </view>
+    <view class="main-subitem">
+      <view class="main-subitem-text">
+        <text>农庄有趣</text>
+        <text>当季蔬果抢鲜</text>
+      </view>
+      <view class="main-subitem-image">
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/apple.png?sign=546503f1112a338256f45329c8dec8e3&t=1551761901"></image>
+      </view>
+    </view>
+    <view class="main-subitem">
+      <view class="main-subitem-text">
+        <text>积分兑换</text>
+        <text>免费领好物</text>
+      </view>
+      <view class="main-subitem-image">
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/tomocc.png?sign=0dbf38020d11b4dd3c426d37e83eb2e5&t=1551761926"></image>
+      </view>
+    </view>
+    <view class="main-subitem">
+      <view class="main-subitem-text">
+        <text>一元拼团</text>
+        <text>拼团享低价</text>
+      </view>
+      <view class="main-subitem-image">
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/xiangchangpng.png?sign=b830eebec40216b208bd3e5833da7553&t=1551761937"></image>
+      </view>
+    </view>
+    <view class="main-subitem">
+      <view class="main-subitem-text">
+        <text>七折直销</text>
+        <text>买到就是赚到</text>
+      </view>
+      <view class="main-subitem-image">
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/jianguo.png?sign=66ca3b5a772950e69255609cc8f6db14&t=1551761952"></image>
+      </view>
+    </view>
+</view>
+
+<!-- 跑马灯效果 -->
+  <view class='horizontal happnews'>
+    <view class='item happy_tui'>
+      <swiper vertical autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular >
+        <block wx:for="{{news}}" wx:key="{{index}}">
+          <swiper-item>
+            <view class='show-text-1 '>
+              <text class='tui_text'>推荐</text>
+              <text class='tui_item'>{{item}}</text>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <view class='more'>
+      <text>更多</text>
+    </view>
+</view>
+
+<!-- 视频区 -->
+ <view class="video_box">
+  <image src="{{!isPlay ? 'https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/video/paly.png?sign=6e09106d1539fbadcd569ad3d99519c7&t=1552179325':'https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/video/pause.png?sign=4ffe89a323b9063276eedb10af954a8a&t=1552179364'}}" catchtap="playVideo" style="display:{{play}}"></image>
+
+  <view class="bg-img" style="display:{{show}}"></view>
+  <video src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/video/x.mp4?sign=e445969fa1728ca8f26c684f2602f155&t=1551790213" controls="{{false}}"  show-center-btn="{{false}}"  show-play-btn="{{false}}"
+  class="myVideo" id="myVideo" catchtap="show_playicon">
+  </video>
+</view>
+
+<!-- 掌柜推荐 -->
+  <view class="recommended">
+    <view class="rec-title">
+      <view class="box"></view>
+      <text>掌柜推荐</text>
+      <text>High quality recommendation</text>
+    </view>
+    <view class="rec-bigImgBox">
+        <view class="rec-bigImg-item">
+          <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/recommended/sale2.png?sign=90aa115b72b6961b9c061e6175a2b86b&t=1551935535">
+          </image>
+          <view class="rec-bigImg-item-textBox">
+            <text>原生态野百花蜜</text>
+            <text>森弄良品</text>
+            <text>福建连城特产美食</text>
+          </view>
+        </view>
+        <view class="rec-bigImg-item">
+          <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/recommended/sale2.png?sign=90aa115b72b6961b9c061e6175a2b86b&t=1551935535">
+          </image>
+          <view class="rec-bigImg-item-textBox">
+            <text>盛耳银耳白木耳</text>
+            <text>象湖人家</text>
+            <text>福建银耳干货</text>
+          </view>
+        </view>
+    </view>
+    <view class="goods-container">
+      <view class="goods-container-item">
+        <view class="goods-container-item-text">
+          <text>东北野生猴头菇</text>
+          <text>健康美味干货</text>
+        </view>
+        <view class="goods-container-item-image">
+          <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/tomocc.png?sign=ccbd083c795e3a0e1caed70a34738976&t=1551957958"></image>
+          <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/apple.png?sign=e89fbd8700091ce6edb4bf34d2ee76fe&t=1551958025"></image>
+        </view>
+      </view>
+      <view class="goods-container-item">
+        <view class="goods-container-item-text">
+          <text>东北野生猴头菇</text>
+          <text>健康美味干货</text>
+        </view>
+        <view class="goods-container-item-image">
+          <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/tomocc.png?sign=ccbd083c795e3a0e1caed70a34738976&t=1551957958"></image>
+          <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/apple.png?sign=e89fbd8700091ce6edb4bf34d2ee76fe&t=1551958025"></image>
+        </view>
+      </view>
+      <view class="goods-container-item">
+        <view class="goods-container-item-text">
+          <text>东北野生猴头菇</text>
+          <text>健康美味干货</text>
+        </view>
+        <view class="goods-container-item-image">
+          <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/tomocc.png?sign=ccbd083c795e3a0e1caed70a34738976&t=1551957958"></image>
+          <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/apple.png?sign=e89fbd8700091ce6edb4bf34d2ee76fe&t=1551958025"></image>
+        </view>
+      </view>
+      <view class="goods-container-item">
+        <view class="goods-container-item-text">
+          <text>东北野生猴头菇</text>
+          <text>健康美味干货</text>
+        </view>
+        <view class="goods-container-item-image">
+          <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/tomocc.png?sign=ccbd083c795e3a0e1caed70a34738976&t=1551957958"></image>
+          <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/apple.png?sign=e89fbd8700091ce6edb4bf34d2ee76fe&t=1551958025"></image>
+        </view>
+      </view>
+
+    </view>
+    
+  
+  </view>
+
+<!-- 隔断条 -->
+  <view class="wall"></view>
+
+<!-- 展示大图 -->
+  <view class="big-banner"></view>
+
+<!-- 隔断条 -->
+<view class="wall"></view>
+
+<!-- 掌柜推荐 -->
+<view class="recommended">
+  <view class="rec-title">
+    <view class="box"></view>
+    <text>掌柜推荐</text>
+    <text>High quality recommendation</text>
+  </view>
+  <view class="rec-bigImgBox">
+      <view class="rec-bigImg-item">
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/recommended/sale2.png?sign=90aa115b72b6961b9c061e6175a2b86b&t=1551935535">
+        </image>
+        <view class="rec-bigImg-item-textBox">
+          <text>原生态野百花蜜</text>
+          <text>森弄良品</text>
+          <text>福建连城特产美食</text>
+        </view>
+      </view>
+      <view class="rec-bigImg-item">
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/recommended/sale2.png?sign=90aa115b72b6961b9c061e6175a2b86b&t=1551935535">
+        </image>
+        <view class="rec-bigImg-item-textBox">
+          <text>盛耳银耳白木耳</text>
+          <text>象湖人家</text>
+          <text>福建银耳干货</text>
+        </view>
+      </view>
+  </view>
+  <view class="goods-container">
+    <view class="goods-container-item">
+      <view class="goods-container-item-text">
+        <text>东北野生猴头菇</text>
+        <text>健康美味干货</text>
+      </view>
+      <view class="goods-container-item-image">
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/tomocc.png?sign=ccbd083c795e3a0e1caed70a34738976&t=1551957958"></image>
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/apple.png?sign=e89fbd8700091ce6edb4bf34d2ee76fe&t=1551958025"></image>
+      </view>
+    </view>
+    <view class="goods-container-item">
+      <view class="goods-container-item-text">
+        <text>东北野生猴头菇</text>
+        <text>健康美味干货</text>
+      </view>
+      <view class="goods-container-item-image">
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/tomocc.png?sign=ccbd083c795e3a0e1caed70a34738976&t=1551957958"></image>
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/apple.png?sign=e89fbd8700091ce6edb4bf34d2ee76fe&t=1551958025"></image>
+      </view>
+    </view>
+    <view class="goods-container-item">
+      <view class="goods-container-item-text">
+        <text>东北野生猴头菇</text>
+        <text>健康美味干货</text>
+      </view>
+      <view class="goods-container-item-image">
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/tomocc.png?sign=ccbd083c795e3a0e1caed70a34738976&t=1551957958"></image>
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/apple.png?sign=e89fbd8700091ce6edb4bf34d2ee76fe&t=1551958025"></image>
+      </view>
+    </view>
+    <view class="goods-container-item">
+      <view class="goods-container-item-text">
+        <text>东北野生猴头菇</text>
+        <text>健康美味干货</text>
+      </view>
+      <view class="goods-container-item-image">
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/tomocc.png?sign=ccbd083c795e3a0e1caed70a34738976&t=1551957958"></image>
+        <image src="https://6d63-mc-dc4b7e-1258736979.tcb.qcloud.la/goods/apple.png?sign=e89fbd8700091ce6edb4bf34d2ee76fe&t=1551958025"></image>
+      </view>
+    </view>
+    
+
+
+
+
+  </view>
+  
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ 
